@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Despliegue en una organización limpia *
 
 # 1. Clonar el repositorio
@@ -79,3 +80,6 @@ No se almacenan credenciales ni información de autenticación de Salesforce den
 Carlos Ardila Chacon - Desarrollador Salesforce Junior
 
 Desarrollado utilizando Salesforce Platform, Apex, Flow, Agentforce y Salesforce CLI
+=======
+# PruebaTecSalesforceCarlosArdila
+>>>>>>> e32c8f30032f3c429da2443d7deded7ea60be7e5

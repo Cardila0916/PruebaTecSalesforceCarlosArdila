@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Solicitud_Retiro__c</entityName>
+    <fieldName>Estado__c</fieldName>
+    <masterLabel>Path Solicitud de Retiro</masterLabel>
+    <recordTypeName>RT_Solicitud_de_Retiro</recordTypeName>
+</PathAssistant>

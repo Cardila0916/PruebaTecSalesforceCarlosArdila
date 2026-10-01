@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Automate common business tasks and assist users in their flow of work. Agentforce Employee Agent can search knowledge articles and other data sources. Customize it further to meet your employees&apos; business needs.</description>
+    <localTopicLinks>
+        <genAiPluginName>Consulta_Movimientos_y_Saldo_Estimado_16jgK000002Dl1Z</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Consulta_Solicitudes_16jgK000002Dl1Z</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>agent_router_16jgK000002Dl1Z</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>Consulta_Solicitudes_16jgK000002Dl1Z</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Este subagente se utilizara para consultar las solicitudes de retiro abiertas, para un cliente en especifico</description>
+        <developerName>Consulta_Solicitudes_16jgK000002Dl1Z</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.
+
+The user&apos;s current context is:
+Current App Name: {{state.currentAppName}}
+Current Object Name: {{state.currentObjectApiName}}
+Current Page Type: {{state.currentPageType}}
+Current Record ID: {{state.currentRecordId}}</description>
+            <developerName>instruction0_179gK000002SjnT</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179gK000002SjnT</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Consultar_Solicitudes_179gK000002SjnT</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Consultar_Solicitudes_179gK000002SjnT</fullName>
+            <description>Esta Acción nos permite consultar las solicitudes abierta de un afiliado entregando el numero de documento, así mismo retornara dos variables, una con el mensaje de la operación y otra con el listado de solicitudes abiertas (si no hay solicitudes abierta la lista esta vacía)</description>
+            <developerName>Consultar_Solicitudes_179gK000002SjnT</developerName>
+            <invocationTarget>Accion_Consultar_Solicitudes</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Consultar_Solicitudes</localDeveloperName>
+            <masterLabel>Consultar Solicitudes</masterLabel>
+        </localActions>
+        <localDeveloperName>Consulta_Solicitudes</localDeveloperName>
+        <masterLabel>Consulta Solicitudes</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Consulta_Movimientos_y_Saldo_Estimado_16jgK000002Dl1Z</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Consulta los últimos 5 movimientos y el saldo estimado de un afiliado utilizando su número de documento.</description>
+        <developerName>Consulta_Movimientos_y_Saldo_Estimado_16jgK000002Dl1Z</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.
+
+The user&apos;s current context is:
+Current App Name: {{state.currentAppName}}
+Current Object Name: {{state.currentObjectApiName}}
+Current Page Type: {{state.currentPageType}}
+Current Record ID: {{state.currentRecordId}}</description>
+            <developerName>instruction0_179gK000002SjnR</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179gK000002SjnR</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Consultar_Movimientos_y_Saldo_Afiliado_179gK000002SjnR</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Consultar_Movimientos_y_Saldo_Afiliado_179gK000002SjnR</fullName>
+            <description>Esta Acción nos permite consultar los ultimos 5 movimientos de un afiliado entregando el numero de documento, así mismo retornara dos variables, una con el saldo estimado del afiliado y otra (si el afiliado no existe)</description>
+            <developerName>Consultar_Movimientos_y_Saldo_Afiliado_179gK000002SjnR</developerName>
+            <invocationTarget>Consultar_Movimientos_y_Saldo_Afiliado</invocationTarget>
+            <invocationTargetType>flow</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Consultar_Movimientos_y_Saldo_Afiliado</localDeveloperName>
+            <masterLabel>Consultar Movimientos y Saldo Afiliado</masterLabel>
+        </localActions>
+        <localDeveloperName>Consulta_Movimientos_y_Saldo_Estimado</localDeveloperName>
+        <masterLabel>Consulta Movimientos y Saldo Estimado</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>agent_router_16jgK000002Dl1Z</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Recibe la solicitud del asesor y la dirige al subagente adecuado.</description>
+        <developerName>agent_router_16jgK000002Dl1Z</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.
+
+The user&apos;s current context is:
+Current App Name: {{state.currentAppName}}
+Current Object Name: {{state.currentObjectApiName}}
+Current Page Type: {{state.currentPageType}}
+Current Record ID: {{state.currentRecordId}}</description>
+            <developerName>instruction0_179gK000002SjnS</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179gK000002SjnS</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>agent_router</localDeveloperName>
+        <masterLabel>Agent Router</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <masterLabel>Agente para empleados</masterLabel>
+    <plannerType>Atlas__ConcurrentMultiAgentOrchestration</plannerType>
+</GenAiPlannerBundle>

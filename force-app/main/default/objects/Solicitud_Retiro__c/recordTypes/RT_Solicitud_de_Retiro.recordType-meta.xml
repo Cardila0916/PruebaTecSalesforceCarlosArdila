@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RT_Solicitud_de_Retiro</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Compact_LY_Solicitd_de_Retiro</compactLayoutAssignment>
+    <label>RT Solicitud de Retiro</label>
+    <picklistValues>
+        <picklist>Estado__c</picklist>
+        <values>
+            <fullName>Aprobada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>En validación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radicada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rechazada</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Motivo__c</picklist>
+        <values>
+            <fullName>Educación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terminación de contrato</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vivienda</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

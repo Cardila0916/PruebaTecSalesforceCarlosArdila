@@ -1,0 +1,14 @@
+{
+  "required" : [ "vDocumento" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "vDocumento" : {
+      "title" : "vDocumento",
+      "description" : "Numero de Documento a consultar",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

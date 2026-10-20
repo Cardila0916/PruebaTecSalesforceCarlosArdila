@@ -1,0 +1,42 @@
+<template>
+    <lightning-card
+        title="Solicitudes de retiro abiertas"
+        icon-name="standard:record">
+
+        <div class="slds-p-around_medium">
+
+            <template lwc:if={cargando}>
+                <lightning-spinner
+                    alternative-text="Cargando solicitudes">
+                </lightning-spinner>
+            </template>
+
+            <template lwc:if={haySolicitudes}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={solicitudes}
+                    columns={columns}
+                    hide-checkbox-column>
+                </lightning-datatable>
+            </template>
+
+            <template lwc:if={resultado.data}>
+                <template lwc:if={haySolicitudes}>
+                </template>
+                <template lwc:else>
+                    <div class="slds-text-align_center slds-p-around_medium">
+                        El afiliado no tiene solicitudes abiertas.
+                    </div>
+                </template>
+            </template>
+
+            <template lwc:if={tieneError}>
+                <div class="slds-text-color_error">
+                    No fue posible consultar las solicitudes.
+                    Verifica los permisos o contacta al administrador.
+                </div>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

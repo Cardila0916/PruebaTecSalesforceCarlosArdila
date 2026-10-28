@@ -1,0 +1,44 @@
+
+<template>
+    <lightning-card title="Radicar solicitud de retiro"
+                    icon-name="standard:case">
+        <div class="slds-p-around_medium">
+            <lightning-record-picker
+                label="Afiliado"
+                placeholder="Buscar afiliado..."
+                object-api-name="Contact"
+                onchange={handleAfiliadoChange}
+                required>
+            </lightning-record-picker>
+
+            <lightning-combobox
+                class="slds-m-top_medium"
+                label="Motivo"
+                value={motivo}
+                options={motivos}
+                onchange={handleMotivoChange}
+            >
+            </lightning-combobox>
+
+            <lightning-input
+                class="slds-m-top_medium"
+                type="number"
+                label="Monto solicitado"
+                min="0.01"
+                step="0.01"
+                value={montoSolicitado}
+                onchange={handleMontoChange}
+            >
+            </lightning-input>
+
+            <div class="slds-m-top_large">
+                <lightning-button
+                    label="Radicar solicitud"
+                    variant="brand"
+                    onclick={handleRadicar}
+                    disabled={deshabilitarBoton}>
+                </lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Solicitud_Retiro__c.Afiliado__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Solicitud_Retiro__c.Monto_Solicitado__c</field>
+    </columns>
+    <columns>
+        <field>Solicitud_Retiro__c.Fecha_Radicacion__c</field>
+    </columns>
+    <description>Reporte agrupado por estado y motivo de las solicitudes de retiro, con cantidades y sumatoria de montos solicitados.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Solicitud_Retiro__c.Estado__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Solicitud_Retiro__c.Motivo__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Solicitud de Retiros Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Solicitud_Retiro__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Solicitud_Retiro__c.Fecha_Radicacion__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
